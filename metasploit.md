@@ -1,4 +1,4 @@
-<img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/f9d72356-a603-42c4-92b4-dfeff2f868b8" height="180">
+<img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/dd2b83bc-ab96-45e4-83c9-b7c38e9dcf98" height="180">
 
 **Lancer nmap dans metasploit:**  
 msf5 > db_nmap -A [IP]  
