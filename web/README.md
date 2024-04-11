@@ -1,4 +1,4 @@
-<img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/6ada07ef-1fa7-4bad-83ff-78d636d8a6b5" width="450">
+<img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/6ada07ef-1fa7-4bad-83ff-78d636d8a6b5" height="180">
 
 ## Énumération des pages web :
 dirb http://[IP] -X .php,.html,.txt  
