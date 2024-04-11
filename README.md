@@ -1,5 +1,5 @@
-# Simple-OSCP-cheat-sheet
-Simple OSCP cheat sheet
+# Simple OSCP cheat sheet
+Just a few commands for my OSCP exam
 
 <a href="https://github.com/florianges/Simple-OSCP-cheat-sheet/blob/main/linux.md"><img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/f9d72356-a603-42c4-92b4-dfeff2f868b8" height="100" ></a>  </br>
 <a href="https://github.com/florianges/Simple-OSCP-cheat-sheet/blob/main/windows.md"><img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/4f64d883-9cac-4bc5-b1a5-bcb1f488d072" height="100">  </a></br>
