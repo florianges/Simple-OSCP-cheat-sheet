@@ -43,6 +43,7 @@ EXECUTE xp_cmdshell 'whoami';
 **shell via un partage samba en écriture:** smbexec.py [user]@[IP]  
 **shell via Windows Management Instrumentation:** wmiexec.py [user]@[IP]  
 **commande via le Planificateur de tâches:** atexec.py [user]@[IP] [commande]  
+**connexion à MSQL:**  impacket-mssqlclient [user]@[IP] -windows-auth  
 
 ## Bloodhound-python :
 sudo neo4j start --> démare neo4j  
