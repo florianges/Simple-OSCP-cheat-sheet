@@ -16,6 +16,7 @@ nmap -A [IP]
 ## Énumération DNS :
 •	dnsenum [IP]  
 •	Transfert de zone: dig AXFR dommaine @serveur_DNS  
+•	récupérer fichier txt: host -t txt [domaine ] 
 
 ## Création de serveur :
 •	http: python -m SimpleHTTPServer [port]  
