@@ -31,3 +31,6 @@ nmap --script broadcast-dhcp-discover
 nmap -p 389 --script ldap-* [IP] : script nmap pour découvir les DC, trouver si des login anonymous sont accepté...  
 ldapsearch -h [IP] -x -s base : Information sur le serveur LDAP, DC, currentTime...  
 ldapsearch -h [IP] -x -b "DC=XXXX,DC=XXXX" : Récupération de l'arborescence du LDAP  
+
+## Enumération SMTP (mail server):
+bruteforce usser: smtp-user-enum.pl -M VRFY -U users.txt -t [IP]  (https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum)
