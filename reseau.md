@@ -40,3 +40,6 @@ snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] .
 
 ## Port Forwarding:
 socat -ddd TCP-LISTEN:[PORT en ecouter],fork TCP:[IP destination]:[port destination]  
+
+### Tunel SSH
+ssh -N -L 0.0.0.0:[Port source]:[IP source]:[PORT destination] database_admin@[IP destination] 
