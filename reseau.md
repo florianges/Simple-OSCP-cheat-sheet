@@ -34,3 +34,6 @@ ldapsearch -h [IP] -x -b "DC=XXXX,DC=XXXX" : Récupération de l'arborescence du
 
 ## Enumération SMTP (mail server):
 bruteforce usser: smtp-user-enum.pl -M VRFY -U users.txt -t [IP]  (https://pentestmonkey.net/tools/user-enumeration/smtp-user-enum)
+
+## Enumération SNMP:
+snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] .  
