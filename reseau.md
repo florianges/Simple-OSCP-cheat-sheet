@@ -37,3 +37,6 @@ bruteforce usser: smtp-user-enum.pl -M VRFY -U users.txt -t [IP]  (https://pente
 
 ## Enumération SNMP:
 snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] .  
+
+## Port Forwarding:
+socat -ddd TCP-LISTEN:[PORT en ecouter],fork TCP:[IP destination]:[port destination]  
