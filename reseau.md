@@ -41,5 +41,14 @@ snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] .
 ## Port Forwarding:
 socat -ddd TCP-LISTEN:[PORT en ecouter],fork TCP:[IP destination]:[port destination]  
 
-### Tunel SSH
-ssh -N -L 0.0.0.0:[Port source]:[IP source]:[PORT destination] database_admin@[IP destination] 
+## Tunel SSH:
+_notes: Local= serveur ssh distant / Remote: serveur ssh local (kali) si la commande est passé sur un server distant_  
+**Local static:** ssh -N -L 0.0.0.0:[Port source]:[IP destination]:[PORT destination] [user]@[serveur ssh distant]  
+**Local dynamique:** ssh -N -D 0.0.0.0:9999 [user]@[serveur ssh distant]  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; _conf /etc/proxychains4.conf -> socks5 [IP destination]  9999_  
+  
+**Remote static:** ssh -N -R 127.0.0.1:[port ecoute kali]:[IP destination]:[port destination] kali@[IP kali]  
+**Remote dynamique:** ssh -N -R 9999 kali@[IP kali]  
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; _conf /etc/proxychains4.conf -> socks5 127.0.0.1 9999_  
+  
+**Avec sshuttle:** sshuttle -r [user]@[serveur ssh] [réseaux à router]/[CIDR]  
