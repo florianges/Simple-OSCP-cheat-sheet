@@ -52,3 +52,9 @@ _notes: Local= serveur ssh distant / Remote: serveur ssh local (kali) si la comm
 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; _conf /etc/proxychains4.conf -> socks5 127.0.0.1 9999_  
   
 **Avec sshuttle:** sshuttle -r [user]@[serveur ssh] [réseaux à router]/[CIDR]  
+
+## Tunel avec chisel
+https://github.com/jpillora/chisel  
+**coté pivot:** chisel_1.9.1_windows_amd64.exe client 192.168.45.226:8000 R:socks   
+**coté kali:** chisel_1.9.1_linux_amd64 server -p 8000 --reverse  
+_conf /etc/proxychains4.conf -> socks5 127.0.0.1 1080_  
