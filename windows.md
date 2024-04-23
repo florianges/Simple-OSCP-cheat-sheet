@@ -68,7 +68,7 @@ EXEC xp_cmdshell @cmd;
 ## Bloodhound-python :
 sudo neo4j start --> démare neo4j  
 bloodhound --no-sandbox --> ouvre bloodhound  
-ou en local: Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\[user]\Desktop\ -OutputPrefix "corp audit"  
+ou en local: Invoke-BloodHound -CollectionMethod All -OutputDirectory C:\Users\[user]\Desktop\ -OutputPrefix "corp audit"  (SharpHound.ps1)
 bloodhound-python -d [domain] -u [user] -p [password] -gc [name.domain] -c all -ns [IP] --> récupère les fichiers  
 Find Principles with DCSync Rights. --> propose un schéma avec les objets principaux  
 Shortest Paths to High value Targets --> propose un schéma avec plus de détail  
