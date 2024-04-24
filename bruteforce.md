@@ -17,9 +17,12 @@ wfuzz -w [wordlist] -d "username=admin&password=FUZZ" --hh=[nombre de carateres 
 python3 brutecsrf.py --url [url] --csrf [name csrf] --u [user] --fuser [name for username form] --passwd [name for password form] --w [wordlist]  
 https://github.com/J3wker/Web-BruteForcer-Token-Support/blob/master/brutecsrf.py  
 ## Bruteforce hash :
-sudo john hash.txt -wordlist=rockyou.txt  
+sudo john hash.txt -wordlist=rockyou.txt --rules  
+sudo hashcat -m [mode] hash.txt rockyou.txt /usr/share/hashcat/rules/best64.rule --force  
+
 ## Bruteforce fichier zip :
 fcrackzip [archive] -D -p [dictionnaire]  
+  
 ## Bruteforce la passphrase d'une clée privée SSH :
 1.	python /usr/share/john/ssh2john.py id_rsa > id_rsa.hash  
 2.	john id_rsa.hash -wordlist=rockyou.txt  
