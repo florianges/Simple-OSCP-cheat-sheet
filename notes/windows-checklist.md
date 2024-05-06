@@ -1,4 +1,4 @@
-### checklist Windows ###
+# Checklist Windows
   
 **Hostname:** hostname  
 **Infos utilisateur:** whoami /all  
