@@ -7,6 +7,9 @@
 **infos system:** systeminfo  
 **powershell-history:** type C:\Users\[user]\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt  
   
+**list connected user:**  
+query user  
+  
 **users and localgroups:**  
 net users  
 net localgroups  
