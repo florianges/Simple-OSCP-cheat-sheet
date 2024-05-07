@@ -28,7 +28,9 @@ Get-LocalUser
 Get-LocalGroup  
 Get-LocalGroupMember adminteam  
   
-**process:** Get-Process  
+**process:**  
+Get-Process  
+tasklist /v  
   
 **Logiciels installés:**  
 Get-ItemProperty "HKLM:\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\Uninstall\*" | select displayname  
