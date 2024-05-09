@@ -22,6 +22,7 @@ nmap -A [IP]
 •	http: python -m SimpleHTTPServer [port]  
 •	ftp: python -m pyftpdlib -p [port]  
 •	smb (avec authentification): smbserver.py -smb2support -username guest -password guest share ./  
+      --> Connexion via windows: net use X: \\[IP]\share /user:guest guest  
 •	smb (sans authentification): smbserver.py -smb2support share ./  
 
 ## Decouvrir les serveurs DHCP sur le réseau :
