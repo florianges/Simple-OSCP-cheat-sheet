@@ -41,6 +41,7 @@ snmpbulkwalk -c [COMM_STRING] -v [VERSION] [IP] .
 
 ## Port Forwarding:
 socat -ddd TCP-LISTEN:[PORT en ecouter],fork TCP:[IP destination]:[port destination]  
+Windows: netsh interface portproxy add v4tov4 listenaddress=[IP source] listenport=[PORT en ecouter] connectaddress=[IP destination] connectport=[port destination]  
 
 ## Tunel SSH:
 _notes: Local= serveur ssh distant / Remote: serveur ssh local (kali) si la commande est passé sur un server distant_  
