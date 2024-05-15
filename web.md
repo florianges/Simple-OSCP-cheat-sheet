@@ -2,7 +2,7 @@
 
 ## Énumération des pages web :
 dirb http://[IP] -X .php,.html,.txt  
-gobuster –url [IP] dir –wordlist /usr/share/wordlists/dirb/big.txt -x php,txt,html  
+gobuster --url [IP] dir --wordlist /usr/share/wordlists/dirb/big.txt -x php,txt,html  
 ## Identification de CMS :
 whatweb [URL]  
 python3 cmseek.py -u [URL]  
