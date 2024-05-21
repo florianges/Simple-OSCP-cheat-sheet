@@ -19,7 +19,10 @@ https://github.com/J3wker/Web-BruteForcer-Token-Support/blob/master/brutecsrf.py
 ## Bruteforce hash :
 sudo john hash.txt -wordlist=rockyou.txt --rules  
 sudo hashcat -m [mode] hash.txt rockyou.txt /usr/share/hashcat/rules/best64.rule --force  
-
+  
+## Bruteforce VHOST:  
+ffuf -w /usr/share/wordlists/SecLists/Discovery/DNS/subdomains-top1million-110000.txt -u http://creative.thm/ -H "Host:FUZZ.creative.thm" -fw 6  
+  
 ## Bruteforce fichier zip :
 fcrackzip [archive] -D -p [dictionnaire]  
   
