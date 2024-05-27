@@ -66,5 +66,20 @@ sekurlsa::logonpasswords --> Dump from Sekurlsa
 sekurlsa::tickets --> Dump cached tickets  
 Some source: https://chryzsh.gitbooks.io/pentestbook/content/privilege_escalation_windows.html  
 
-## démarer un service:  
-sc.exe start audtiTracker  
+## exploiter un service:  
+**lister les services:** Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}  
+Lister service modifiable: Get-ModifiableServiceFile (PowerUp.ps1)  
+**infos sur un service:** SC.exe query <service>  
+**démarer un sevice:** sc.exe start <service>  
+**ou:** net start <service>  
+  
+## DLL hyjacking:  
+Standard DLL search order on current Windows versions: 
+1. The directory from which the application loaded.  
+2. The system directory.  
+3. The 16-bit system directory.  
+4. The Windows directory.   
+5. The current directory.  
+6. The directories that are listed in the PATH environment variable.
+
+7. 
