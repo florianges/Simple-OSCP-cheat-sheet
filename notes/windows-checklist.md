@@ -68,7 +68,7 @@ Some source: https://chryzsh.gitbooks.io/pentestbook/content/privilege_escalatio
 
 ## exploiter un service
 **lister les services:** Get-CimInstance -ClassName win32_service | Select Name,State,PathName | Where-Object {$_.State -like 'Running'}  
-**ou:** wmic service get name,pathname
+**ou:** wmic service get name,pathname  
 **Lister service modifiable:** Get-ModifiableServiceFile (PowerUp.ps1)  
 **ou:** accesschk.exe /accepeula - accesschk.exe -uwcqv "user" *  
 **infos sur un service:** SC.exe query <service>  
