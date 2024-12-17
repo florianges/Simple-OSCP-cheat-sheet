@@ -39,3 +39,6 @@ Exploitation des droits SUDO/SUID sur des binaires connu:
 https://gtfobins.github.io/
   
 **Persistance via crontab:** (crontab -l 2>/dev/null; echo "* * * * * /home/aero/floflo.elf") | crontab -  
+
+**Stegano:**  
+https://www.aperisolve.com
